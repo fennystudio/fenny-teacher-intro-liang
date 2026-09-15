@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梁麗芬｜Fenny Studio 毛根手作花藝講師介紹</title>
+<style>
+  :root{
+    --pink:#e89bb4;
+    --pink-deep:#d36b8e;
+    --purple:#c8b3e2;       /* 淡雅薰衣草，貼近紫色鬱金香 */
+    --purple-deep:#9e83c6;
+    --green:#6fae7d;
+    --cream:#fdf7f3;
+    --ink:#4a3a40;
+    --ink-soft:#7a6a70;
+    --gold:#c9a96a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+    background:#241c28;color:var(--ink);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  /* ---- 16:9 fixed canvas ---- */
+  .deck{
+    position:relative;width:1280px;height:720px;flex:0 0 auto;
+    transform:scale(var(--s,1));transform-origin:center center;
+    border-radius:6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .slide{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    padding:48px 60px;background:var(--cream);overflow:hidden;
+  }
+  .slide::before{
+    content:"";position:absolute;top:-130px;right:-130px;width:360px;height:360px;border-radius:50%;
+    background:radial-gradient(circle,rgba(232,155,180,.26),transparent 70%);
+  }
+  .slide::after{
+    content:"";position:absolute;bottom:-150px;left:-130px;width:400px;height:400px;border-radius:50%;
+    background:radial-gradient(circle,rgba(200,179,226,.40),transparent 70%);
+  }
+  .slide > *{position:relative;z-index:1;}
+
+  .eyebrow{display:inline-block;font-size:16px;letter-spacing:4px;color:var(--pink-deep);font-weight:600;margin-bottom:14px;}
+  h2{font-size:36px;color:var(--ink);font-weight:800;margin-bottom:4px;}
+  h3{font-size:20px;color:var(--pink-deep);font-weight:700;}
+  p,li{font-size:17px;line-height:1.7;color:var(--ink-soft);}
+
+  /* ---- Instructor + showreel (left/right) ---- */
+  .inst{flex-direction:row;gap:46px;align-items:stretch;}
+  .inst .left{flex:0 0 400px;display:flex;flex-direction:column;justify-content:center;}
+  .inst .photo-wrap{position:relative;width:170px;height:170px;margin-bottom:22px;}
+  .inst .photo-wrap img{width:170px;height:170px;object-fit:cover;border-radius:20px;box-shadow:0 14px 34px rgba(158,131,198,.35);}
+  .inst .photo-wrap .ring{position:absolute;inset:-10px;border:3px solid var(--purple);border-radius:28px;opacity:.55;}
+  .inst .left ul{list-style:none;margin-top:14px;}
+  .inst .left li{padding-left:28px;position:relative;margin-bottom:11px;font-size:17px;line-height:1.55;color:var(--ink-soft);}
+  .inst .left li::before{content:"🌷";position:absolute;left:0;top:1px;font-size:15px;}
+  .inst .right{flex:1;min-width:0;display:flex;flex-direction:column;padding-top:38px;}
+  .showreel-label{font-size:15px;letter-spacing:2px;color:var(--pink-deep);font-weight:700;margin-bottom:12px;}
+  .reel{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,1fr);gap:9px;}
+  .reel .cell{min-width:0;min-height:0;border-radius:12px;overflow:hidden;background:#efe9f3;box-shadow:0 5px 14px rgba(0,0,0,.07);}
+  .reel video,.reel img{width:100%;height:100%;object-fit:cover;display:block;}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- INSTRUCTOR + SHOWREEL -->
+  <section class="slide inst">
+    <div class="left">
+      <div class="photo-wrap">
+        <div class="ring"></div>
+        <img src="assets/instructor.png" alt="講師 梁麗芬">
+      </div>
+      <span class="eyebrow" style="margin-bottom:6px;">講師介紹</span>
+      <h2>梁麗芬</h2>
+      <h3>Fenny Studio｜毛根手作花藝講師</h3>
+      <ul>
+        <li>專注毛根手作花藝設計與教學</li>
+        <li>擅長把細膩花型拆成簡單步驟，零基礎也能完成</li>
+        <li>帶領企業團體、親子與社群手作活動經驗豐富</li>
+        <li>理念：用雙手做一朵不凋謝的花，把溫度帶回家</li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="showreel-label">🌷 精選毛根手作作品</div>
+      <div class="reel">
+        <div class="cell"><video src="assets/reel/01.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/02.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/03.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/04.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/05.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/06.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/07.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/08.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/09.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/10.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/11.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/12.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/13.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/14.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/15.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/16.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/17.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+        <div class="cell"><video src="assets/reel/18.mp4" autoplay muted loop playsinline preload="metadata"></video></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const deck=document.getElementById('deck');
+  function fit(){
+    const s=Math.min(window.innerWidth/1280,window.innerHeight/720);
+    deck.style.setProperty('--s',s);
+  }
+  window.addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
